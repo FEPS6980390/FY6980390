@@ -101,8 +101,7 @@ p.exl {
 
   </p>
 
-<!DOCTYPE html>
-<html>
+
 <head>
   <title>Change Button Colour</title>
 </head>
@@ -111,9 +110,20 @@ p.exl {
 
   <script>
     //Get a reference to the button element
-    var butto
+    var button = document.getElementById("colorButton");
+// Function to change the button color
+function changeColor() {
+// Generate a random color (hexadecimal)
+var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+// Set the button's background color to the random color
+button.style.backgroundColor = randomColor;
+}
+// Add a click event listener to the button
+button.addEventListener("click", changeColor);
+</script>
 </body>
 </html>
+
   
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
